@@ -53,7 +53,6 @@ if text != "":
         answer = df.iloc[df_idx]
         answer["score"] = score
         answer.pop("latin_clean")
-
         answer = answer[["score", "book", "chapter", "verse", "latin"]]
         matches.append(answer)
     res_df = pd.DataFrame(matches)
