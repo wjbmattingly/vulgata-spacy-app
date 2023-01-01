@@ -36,8 +36,8 @@ def load_data():
     return df, index_map
 
 st.markdown("<p style='text-align: center; color: grey;'>"+img_to_html('images/header.png')+"</p>", unsafe_allow_html=True)
-t = load_annoy()
 nlp = load_pipeline()
+t = load_annoy()
 df, index_map = load_data()
 
 text = st.text_area("Paste Phrase Here")
