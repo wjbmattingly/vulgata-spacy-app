@@ -1,0 +1,3 @@
+vulgata-pipeline
+vulgata-spacy
+pandas
