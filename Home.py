@@ -6,6 +6,8 @@ import json
 import base64
 from pathlib import Path
 
+st.set_page_config(page_title='VulgateAI - Home', page_icon = "images/icon.png", layout = 'wide', initial_sidebar_state = 'auto')
+
 def img_to_bytes(img_path):
     img_bytes = Path(img_path).read_bytes()
     encoded = base64.b64encode(img_bytes).decode()
@@ -35,7 +37,8 @@ def load_data():
         index_map = json.load(f)
     return df, index_map
 
-st.markdown("<p style='text-align: center; color: grey;'>"+img_to_html('images/header.png')+"</p>", unsafe_allow_html=True)
+# st.markdown("<p style='text-align: center; color: grey;'>"+img_to_html('images/header.png')+"</p>", unsafe_allow_html=True)
+st.image('images/header.png')
 nlp = load_pipeline()
 t = load_annoy()
 df, index_map = load_data()
